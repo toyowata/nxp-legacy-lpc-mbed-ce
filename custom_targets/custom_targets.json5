@@ -1,0 +1,77 @@
+{
+    "AE_LPC11U35_MB": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "RP2040"
+    },
+    "AIRIO_BASE": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "RP2040"
+    },
+    "SSCI824": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "RP2040"
+    },
+    "LPC824": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "RP2040"
+    },
+    "LPC1549": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "LPC1549"
+    },
+    "LPC1769": {
+        "inherits": ["LPC1768"],
+        //"device_name": "LPC1769",
+        "memory_banks": {
+            "IRAM1": {
+                "access": {
+                    "execute": false,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": true
+                },
+                "default": true,
+                "size": 32768,
+                "start": 268435456,
+                "startup": false
+            },
+            "IRAM2": {
+                "access": {
+                    "execute": false,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": true
+                },
+                "default": true,
+                "size": 32768,
+                "start": 537378816,
+                "startup": false
+            },
+            "IROM1": {
+                "access": {
+                    "execute": true,
+                    "non_secure": false,
+                    "non_secure_callable": false,
+                    "peripheral": false,
+                    "read": true,
+                    "secure": false,
+                    "write": false
+                },
+                "default": true,
+                "size": 524288,
+                "start": 0,
+                "startup": true
+            }
+        },
+    },
+    "LPC11U68": {
+        "inherits": ["RASPBERRY_PI_PICO"],
+        "device_name": "LPC11U68"
+    },
+}

@@ -1,0 +1,37 @@
+{
+    "macros":   [
+        "MBED_BLINKY_EXAMPLE=1",
+        "MBED_FILESYSTEM_EXAMPLE=0"
+    ],
+    "target_overrides": {
+        "*": {
+            // By default, use a serial baudrate of 115200 and enable buffering on the serial port.
+            "platform.stdio-baud-rate"                  : 115200,
+            "platform.stdio-convert-newlines"           : true,
+            "platform.stdio-buffered-serial"            : true,
+            "platform.stdio-flush-at-exit"              : true,
+
+            // Uncomment to use mbed-baremetal instead of mbed-os
+            "target.application-profile": "bare-metal",
+        },
+        "AIRIO_BASE": {
+            "target.components_add"             : ["SD"],
+            "sd.SPI_MOSI"                       : "P0_21",
+            "sd.SPI_MISO"                       : "P0_22",
+            "sd.SPI_CLK"                        : "P1_15",
+            "sd.SPI_CS"                         : "P0_17"
+        },
+        "LPC11U68": {
+            "target.components_add"             : ["SD"],
+            "sd.SPI_MOSI"                       : "D11",
+            "sd.SPI_MISO"                       : "D12",
+            "sd.SPI_CLK"                        : "D13",
+            "sd.SPI_CS"                         : "D10"
+        }
+    },
+    "config": {
+        "main-stack-size": {
+            "value": 2048
+        }
+    }
+}
